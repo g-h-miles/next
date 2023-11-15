@@ -1,0 +1,1209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-big-calendar/lib/css/react-big-calendar.css';
+
+@layer base {
+  /* default theme */
+  :root {
+    /*
+      - gray/natural colors for texts, borders and disabled elements.
+      - If required we can use as background too.
+    */
+    /* For rgb(255 255 255 / <alpha-value>) = #ffffff */
+    --gray-0: 255 255 255;
+    /* For rgb(250 250 250 / <alpha-value>) = #fafafa */
+    --gray-50: 250 250 250;
+    /* For rgb(241 241 241 / <alpha-value>) = #f1f1f1 */
+    --gray-100: 241 241 241;
+    /* For rgb(227 227 227 / <alpha-value>) = #e3e3e3 */
+    --gray-200: 227 227 227;
+    /* For rgb(223 223 223 / <alpha-value>) = #dfdfdf */
+    --gray-300: 223 223 223;
+    /* For rgb(146 146 146 / <alpha-value>) = #929292 */
+    --gray-400: 146 146 146;
+    /* For rgb(102 102 102 / <alpha-value>) = #666666 */
+    --gray-500: 102 102 102;
+    /* For rgb(72 72 72 / <alpha-value>) = #484848 */
+    --gray-600: 72 72 72;
+    /* For rgb(51 51 51 / <alpha-value>) = #333333 */
+    --gray-700: 51 51 51;
+    /* For rgb(34 34 34 / <alpha-value>) = #222222 */
+    --gray-800: 34 34 34;
+    /* For rgb(17 17 17 / <alpha-value>) = #111111 */
+    --gray-900: 17 17 17;
+    /* For rgb(0 0 0 / <alpha-value>) = #000000 */
+    --gray-1000: 0 0 0;
+
+    /* ----------------------------------- */
+    /* primary/brand colors */
+    /* ----------------------------------- */
+    /* For rgb(215 227 254 / <alpha-value>) = #D7E3FE */
+    --primary-lighter: 215 227 254;
+    /* For rgb(96 142 251 / <alpha-value>) = #608EFB */
+    --primary-light: 96 142 251;
+    /* For rgb(56 114 250 / <alpha-value>) = #3872FA */
+    --primary-default: 56 114 250;
+    /* For rgb(29 88 216 / <alpha-value>) = #1d58d8 */
+    --primary-dark: 29 88 216;
+
+    /* ----------------------------------- */
+    /* secondary colors */
+    /* ----------------------------------- */
+    /* For rgb(227 215 252 / <alpha-value>) = #e3d7fc */
+    --secondary-lighter: 227 215 252;
+    /* For rgb(138 99 210 / <alpha-value>) = #8a63d2 */
+    --secondary-light: 138 99 210;
+    /* For rgb(121 40 202 / <alpha-value>) = #7928ca */
+    --secondary-default: 121 40 202;
+    /* For rgb(76 40 137 / <alpha-value>) = #4c2889 */
+    --secondary-dark: 76 40 137;
+
+    /* ----------------------------------- */
+    /* red/error colors */
+    /* ----------------------------------- */
+    /* For rgb(247 212 214 / <alpha-value>) = #f7d4d6 */
+    --red-lighter: 247 212 214;
+    /* For rgb(255 26 26 / <alpha-value>) = #ff1a1a */
+    --red-light: 255 26 26;
+    /* For rgb(238 0 0 / <alpha-value>) = #e00 */
+    --red-default: 238 0 0;
+    /* For rgb(197 0 0 / <alpha-value>) = #c50000 */
+    --red-dark: 197 0 0;
+
+    /* ----------------------------------- */
+    /* orange/warning colors */
+    /* ----------------------------------- */
+    /* For rgb(255 239 207 / <alpha-value>) = #ffefcf */
+    --orange-lighter: 255 239 207;
+    /* For rgb(247 185 85 / <alpha-value>) = #f7b955 */
+    --orange-light: 247 185 85;
+    /* For rgb(245 166 35 / <alpha-value>) = #f5a623 */
+    --orange-default: 245 166 35;
+    /* For rgb(171 87 10 / <alpha-value>) = #ab570a */
+    --orange-dark: 171 87 10;
+
+    /* ----------------------------------- */
+    /* blue/info colors */
+    /* ----------------------------------- */
+    /* For rgb(211 229 255 / <alpha-value>) = #d3e5ff */
+    --blue-lighter: 211 229 255;
+    /* For rgb(50 145 255 / <alpha-value>) = #3291ff */
+    --blue-light: 50 145 255;
+    /* For rgb(0 112 243 / <alpha-value>) = #0070f3 */
+    --blue-default: 0 112 243;
+    /* For rgb(7 97 209 / <alpha-value>) = #0761d1 */
+    --blue-dark: 7 97 209;
+
+    /* ----------------------------------- */
+    /* green/success colors */
+    /* ----------------------------------- */
+    /* For rgb(185 249 207 / <alpha-value>) = #b9f9cf */
+    --green-lighter: 185 249 207;
+    /* For rgb(28 203 92 / <alpha-value>) = #06C167 */
+    --green-light: 6 193 103;
+    /* For rgb(17 168 73 / <alpha-value>) = #048848 */
+    --green-default: 4 136 72;
+    /* For rgb(17 132 60 / <alpha-value>) = #03703C */
+    --green-dark: 3 112 60;
+  }
+
+  /* dark theme */
+  [data-theme='dark'] {
+    /*
+      - gray/natural color shades for texts, borders and disabled elements.
+      - If required we can use as background too.
+    */
+    /* For rgb(0 0 0 / <alpha-value>) = #000000  */
+    --gray-0: 0 0 0;
+    /* For rgb(17 17 17 / <alpha-value>) = #111111 */
+    --gray-50: 17 17 17;
+    /* For rgb(34 34 34 / <alpha-value>) = #222222 */
+    --gray-100: 34 34 34;
+    /* For rgb(51 51 51 / <alpha-value>) = #333333 */
+    --gray-200: 51 51 51;
+    /* For rgb(72 72 72 / <alpha-value>) = #484848 */
+    --gray-300: 72 72 72;
+    /* For rgb(102 102 102 / <alpha-value>) = #666666 */
+    --gray-400: 102 102 102;
+    /* For rgb(146 146 146 / <alpha-value>) = #929292 */
+    --gray-500: 146 146 146;
+    /* For rgb(162 162 162 / <alpha-value>) = #a2a2a2 */
+    --gray-600: 162 162 162;
+    /* For rgb(223 223 223 / <alpha-value>) = #dfdfdf */
+    --gray-700: 223 223 223;
+    /* For rgb(226 226 226 / <alpha-value>) = #e2e2e2 */
+    --gray-800: 226 226 226;
+    /* For rgb(241 241 241 / <alpha-value>) = #f1f1f1 */
+    --gray-900: 241 241 241;
+    /* For rgb(255 255 255 / <alpha-value>) = #ffffff */
+    --gray-1000: 255 255 255;
+
+    /* ----------------------------------- */
+    /* secondary colors */
+    /* ----------------------------------- */
+    /* For rgb(138 99 210 / <alpha-value>) = #7928ca */
+    --secondary-default: 138 99 210;
+    /* For rgb(121 40 202 / <alpha-value>) = #4c2889 */
+    --secondary-dark: 121 40 202;
+
+    /* ----------------------------------- */
+    /* red/error colors */
+    /* ----------------------------------- */
+    /* For rgb(253 226 221 / <alpha-value>) = #fde2dd */
+    --red-lighter: 253 226 221;
+    /* For rgb(242 65 34 / <alpha-value>) = #f24122 */
+    --red-light: 242 65 34;
+    /* For rgb(197 40 12 / <alpha-value>) = #c5280c */
+    --red-default: 197 40 12;
+    /* For rgb(159 32 10 / <alpha-value>) = #9f200a */
+    --red-dark: 159 32 10;
+    /* here you can customize other colors for dark theme if design required */
+  }
+
+  /* base style */
+  html {
+    @apply h-full antialiased;
+  }
+
+  #player {
+    @apply dark:bg-gray-50;
+  }
+
+  body {
+    @apply flex min-h-full flex-col overflow-x-hidden text-sm text-gray-600 dark:bg-gray-50;
+  }
+
+  input::-ms-clear,
+  input::-ms-reveal {
+    @apply hidden;
+  }
+
+  input[type='search']::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    @apply m-0 appearance-none;
+  }
+
+  input[type='checkbox']:checked {
+    @apply bg-none;
+  }
+
+  /* typography style for the Text component */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-lexend font-bold text-gray-900 dark:text-gray-700;
+  }
+
+  h1 {
+    @apply text-3xl dark:text-gray-800 2xl:text-[32px] 4xl:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl dark:text-gray-800 2xl:text-[26px] 4xl:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl 2xl:text-[22px] 4xl:text-2xl;
+  }
+
+  h4 {
+    @apply text-lg 2xl:xl:text-xl;
+  }
+
+  h5 {
+    @apply text-base 2xl:text-lg;
+  }
+
+  h6 {
+    @apply text-sm 2xl:text-base;
+  }
+
+  q {
+    @apply text-lg;
+  }
+}
+
+@layer utilities {
+  .fill-opacity-10 {
+    fill-opacity: 0.1;
+  }
+
+  .fill-opacity-20 {
+    fill-opacity: 0.2;
+  }
+
+  .fill-opacity-30 {
+    fill-opacity: 0.3;
+  }
+
+  .fill-opacity-60 {
+    fill-opacity: 0.6;
+  }
+
+  /* animation delay required for the Loader component */
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+
+  /* this utility class required for the PinCode component */
+  .password-dot {
+    -webkit-text-security: disc;
+    -moz-text-security: circle;
+    text-security: circle;
+  }
+
+  /* experimental */
+  .card-shadow {
+    box-shadow:
+      0px 1px 0 rgba(0, 0, 0, 0.02),
+      0px 2px 6px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* ................................................... */
+/* scrollbar design starts from here */
+/* ................................................... */
+.simplebar-scrollbar:before {
+  @apply !bg-gray-400 dark:!bg-gray-300;
+}
+
+.simplebar-track.simplebar-horizontal {
+  @apply !h-2.5;
+}
+
+.simplebar-track.simplebar-vertical {
+  @apply !w-2.5;
+}
+
+.custom-scrollbar::-webkit-scrollbar,
+.rc-table-fixed-header .rc-table-body::-webkit-scrollbar {
+  @apply w-1.5 bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track,
+.rc-table-content::-webkit-scrollbar-track,
+.rc-table-fixed-header .rc-table-body::-webkit-scrollbar-track {
+  @apply bg-transparent shadow-none;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb,
+.rc-table-content::-webkit-scrollbar-thumb,
+.rc-table-fixed-header .rc-table-body::-webkit-scrollbar-thumb {
+  @apply rounded-sm bg-transparent;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb,
+.rc-table-content:hover::-webkit-scrollbar-thumb,
+.rc-table-fixed-header .rc-table-body:hover::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-300;
+}
+
+.custom-scrollbar.scrollbar-no-auto-hide::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-300;
+}
+
+.custom-scrollbar-x::-webkit-scrollbar,
+.rc-table-content::-webkit-scrollbar,
+.rc-table-fixed-header .rc-table-body::-webkit-scrollbar {
+  @apply h-1.5;
+}
+
+.custom-scrollbar-none::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* for firefox */
+.custom-scrollbar,
+.rc-table-content {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0);
+}
+
+/* ................................................... */
+/* Change autocomplete styles in WebKit */
+/* ................................................... */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid transparent;
+  -webkit-text-fill-color: currentColor;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ................................................... */
+/* ?React Datepicker Styling */
+/* ................................................... */
+.react-datepicker-popper .react-datepicker {
+  @apply bg-gray-0 font-inter text-gray-600 dark:border-gray-300 dark:bg-gray-100;
+}
+
+input[type='checkbox']:checked ~ svg {
+  @apply !text-gray-0;
+}
+
+/* month container */
+.react-datepicker .react-datepicker__month-container {
+  @apply px-3;
+}
+
+/* time container */
+.react-datepicker .react-datepicker__time-container {
+  @apply w-auto border-l-0 pr-3.5;
+}
+
+.react-datepicker-popper
+  .react-datepicker__time-container
+  .react-datepicker__time {
+  @apply bg-gray-50 dark:bg-gray-200;
+}
+
+.react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box
+  ul.react-datepicker__time-list
+  li.react-datepicker__time-list-item:hover {
+  @apply dark:bg-gray-300;
+}
+
+/* header */
+.react-datepicker .react-datepicker__header {
+  @apply border-b-gray-0 bg-gray-0 font-lexend dark:border-transparent dark:bg-gray-100;
+}
+
+/* current month name in header */
+.react-datepicker .react-datepicker-year-header {
+  @apply dark:text-gray-700;
+}
+
+.react-datepicker .react-datepicker__current-month {
+  @apply mb-3 text-base font-medium dark:text-gray-700;
+}
+
+/* sun-sat day names in header */
+.react-datepicker .react-datepicker__day-names div {
+  @apply m-1.5 text-sm text-gray-700;
+}
+
+/* previous month button */
+.react-datepicker .react-datepicker__navigation--previous {
+  @apply ml-6 rtl:mr-6;
+}
+
+/* next month button */
+.react-datepicker .react-datepicker__navigation--next {
+  @apply mr-6 rtl:ml-6;
+}
+
+/* icon in previous month button */
+.react-datepicker .react-datepicker__navigation-icon--previous {
+  @apply right-0.5;
+}
+
+/* icon in next month button */
+.react-datepicker .react-datepicker__navigation-icon--next {
+  @apply left-0.5;
+}
+
+/* each day */
+.react-datepicker .react-datepicker__day {
+  @apply m-1.5 text-sm leading-7 text-gray-700;
+  @apply hover:rounded-full hover:bg-gray-100 hover:text-gray-900;
+}
+
+/* outside month */
+.react-datepicker .react-datepicker__day--outside-month {
+  @apply text-gray-500;
+}
+
+/* keyboard selected */
+.react-datepicker .react-datepicker__day--keyboard-selected {
+  @apply bg-gray-0;
+}
+
+/* today */
+.react-datepicker .react-datepicker__day--today {
+  @apply rounded-full border border-gray-300 bg-gray-0 leading-[26px] text-gray-900;
+  @apply hover:border-gray-600 hover:bg-gray-0;
+}
+
+/* while selecting */
+.react-datepicker div.react-datepicker__day--in-selecting-range {
+  @apply rounded-full bg-gray-200 text-gray-900;
+}
+
+.react-datepicker div.react-datepicker__year-text--in-selecting-range {
+  @apply bg-gray-200 text-gray-900;
+}
+
+.react-datepicker
+  div.react-datepicker__year-text--in-selecting-range.react-datepicker__year-text--disabled {
+  @apply bg-transparent text-gray-300;
+}
+
+/* in range */
+.react-datepicker .react-datepicker__day--in-range {
+  @apply rounded-full bg-gray-200 text-gray-900;
+}
+
+.react-datepicker .react-datepicker__year-text--in-range {
+  @apply bg-gray-200 text-gray-900;
+}
+
+/* selected */
+.react-datepicker .react-datepicker__day--range-start,
+.react-datepicker .react-datepicker__day--range-end,
+.react-datepicker .react-datepicker__day--selected {
+  @apply rounded-full border-none bg-gray-900 font-normal leading-7 text-gray-0;
+  @apply hover:bg-gray-900/80 hover:text-gray-0;
+}
+
+.react-datepicker .react-datepicker__year-text--range-end {
+  @apply border-none bg-gray-900 font-normal text-gray-0 hover:bg-gray-900/80 hover:text-gray-0;
+}
+
+/* time list */
+.react-datepicker .react-datepicker__time-list {
+  @apply !h-[247px];
+}
+
+/* time item */
+.react-datepicker .react-datepicker__time-list-item {
+  @apply my-2 rounded text-sm text-gray-500;
+  @apply hover:bg-gray-100 hover:text-gray-900;
+}
+
+/* selected time item */
+.react-datepicker .react-datepicker__time-list-item--selected {
+  @apply !bg-gray-100 !font-medium !text-gray-900;
+}
+
+/* time only box */
+.react-datepicker-popper .react-datepicker-time__header {
+  @apply text-gray-700;
+}
+.react-datepicker-popper
+  .react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box {
+  width: 90px;
+}
+.react-datepicker--time-only
+  .react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box {
+  @apply w-auto;
+}
+
+/* time only item */
+.react-datepicker--time-only .react-datepicker__time-list-item {
+  @apply rounded-none;
+}
+
+/* month picker text */
+.react-datepicker .react-datepicker__month-text {
+  @apply w-0 px-5 py-1.5;
+}
+
+/* keyboard selected month in month picker */
+.react-datepicker .react-datepicker__month-text--keyboard-selected {
+  @apply bg-gray-100 text-gray-900;
+}
+
+/* month in range */
+.react-datepicker .react-datepicker__month--in-range {
+  @apply bg-gray-200 text-gray-700;
+}
+
+/* hover on selected months in range */
+.react-datepicker
+  .react-datepicker__month-text.react-datepicker__month--in-range:hover {
+  @apply bg-gray-200 text-gray-900;
+}
+
+/* selected month in range */
+.react-datepicker .react-datepicker__month--range-start,
+.react-datepicker .react-datepicker__month--range-end,
+.react-datepicker .react-datepicker__month--selected {
+  @apply bg-gray-900 font-normal text-gray-0;
+}
+
+/* hover on selected range start and end month */
+.react-datepicker
+  .react-datepicker__month-text.react-datepicker__month--selected:hover,
+.react-datepicker
+  .react-datepicker__month-text.react-datepicker__month--range-start:hover,
+.react-datepicker
+  .react-datepicker__month-text.react-datepicker__month--range-end:hover {
+  @apply bg-gray-900/80 text-gray-0;
+}
+
+/* year wrapper in year picker */
+.react-datepicker .react-datepicker__year-wrapper {
+  @apply inline-block max-w-[220px];
+}
+
+/* year text in year picker */
+.react-datepicker .react-datepicker__year-text {
+  @apply w-auto px-5 py-1.5 text-gray-600 dark:hover:text-gray-100;
+}
+
+.react-datepicker .react-datepicker__year-text--range-end {
+  @apply text-gray-0;
+}
+
+/* keyboard selected year in year picker */
+.react-datepicker .react-datepicker__year-text--keyboard-selected {
+  @apply bg-gray-200 text-gray-900;
+  @apply hover:bg-gray-300 hover:text-gray-900;
+}
+
+/* selected year & month in year picker */
+.react-datepicker
+  .react-datepicker__year-text.react-datepicker__year-text--selected,
+.react-datepicker
+  .react-datepicker__month-text.react-datepicker__month-text--selected {
+  @apply bg-gray-900 text-gray-0;
+  @apply hover:bg-gray-900/80 hover:text-gray-0;
+}
+
+/* year and month dropdown arrow */
+.react-datepicker .react-datepicker__year-read-view--down-arrow,
+.react-datepicker .react-datepicker__month-read-view--down-arrow {
+  @apply top-[5px] h-[7px] w-[7px] border-r-[1.5px] border-t-[1.5px] border-gray-400;
+}
+
+/* sub-header containing year and month dropdown */
+.react-datepicker
+  .react-datepicker__current-month--hasYearDropdown.react-datepicker__current-month--hasMonthDropdown
+  ~ .react-datepicker__header__dropdown {
+  @apply my-2 grid grid-cols-2 divide-x divide-gray-300 text-sm;
+}
+
+/* month and year dropdown button in sub-header */
+.react-datepicker .react-datepicker__month-dropdown-container--scroll,
+.react-datepicker .react-datepicker__year-dropdown-container--scroll {
+  @apply inline-flex justify-center;
+}
+
+/* month and year dropdown */
+.react-datepicker .react-datepicker__year-dropdown,
+.react-datepicker .react-datepicker__month-dropdown {
+  @apply top-auto w-2/5 border border-gray-100 bg-gray-0 shadow-md;
+}
+
+/* year dropdown */
+.react-datepicker .react-datepicker__year-dropdown {
+  @apply h-80;
+}
+
+/* month dropdown */
+.react-datepicker .react-datepicker__month-dropdown {
+  @apply py-3;
+}
+
+/* month and year option */
+.react-datepicker .react-datepicker__month-option,
+.react-datepicker .react-datepicker__year-option {
+  @apply my-1 py-1 text-sm text-gray-600;
+  @apply hover:bg-gray-100 hover:text-gray-900;
+}
+
+/* first and last type of month and year option */
+.react-datepicker .react-datepicker__month-option:first-of-type,
+.react-datepicker .react-datepicker__month-option:last-of-type,
+.react-datepicker .react-datepicker__year-option:first-of-type,
+.react-datepicker .react-datepicker__year-option:last-of-type {
+  @apply rounded-none;
+}
+
+/* selected month and year in dropdown */
+.react-datepicker .react-datepicker__month-option--selected_month,
+.react-datepicker .react-datepicker__year-option--selected_year {
+  @apply bg-gray-200 text-gray-900;
+  @apply [&>span]:hidden;
+}
+.react-datepicker .react-datepicker__day:hover,
+.react-datepicker .react-datepicker__month-text:hover,
+.react-datepicker .react-datepicker__quarter-text:hover,
+.react-datepicker .react-datepicker__year-text:hover {
+  @apply bg-gray-200 text-gray-900;
+}
+
+/* disabled item */
+.react-datepicker .react-datepicker__day--disabled {
+  @apply cursor-not-allowed text-gray-300 hover:bg-transparent hover:text-gray-300 dark:hover:text-gray-300;
+}
+
+.react-datepicker .react-datepicker__year-text--disabled {
+  @apply cursor-not-allowed text-gray-300 hover:bg-transparent dark:hover:text-gray-300;
+}
+
+/* ................................................... */
+/* table placeholder / empty style */
+/* ................................................... */
+.rc-table-placeholder .rc-table-expanded-row-fixed {
+  @apply !w-full;
+}
+
+th.rc-table-cell-fix-right {
+  @apply bg-gray-100;
+}
+
+td.rc-table-cell-fix-right {
+  @apply bg-gray-0;
+}
+
+.rc-table-cell-fix-right-first,
+.rc-table-cell-fix-right-last {
+  box-shadow: -1px 0 black;
+}
+
+.rc-table-ping-right .rc-table-cell-fix-right-first:after,
+.rc-table-ping-right .rc-table-cell-fix-right-last:after {
+  box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.2);
+}
+
+.rc-table-cell-fix-right-first:after,
+.rc-table-cell-fix-right-last:after {
+  content: '';
+  transform: translate(-100%);
+  @apply pointer-events-none absolute -bottom-[1px] -left-[1px] top-0 w-5;
+}
+
+.rc-pagination-prev:not(.rc-pagination-disabled) > div,
+.rc-pagination-next:not(.rc-pagination-disabled) > div,
+.rc-pagination-jump-prev:not(.rc-pagination-disabled) > div,
+.rc-pagination-jump-next:not(.rc-pagination-disabled) > div {
+  @apply text-gray-700;
+}
+
+/*
+* All form inputs common css
+*/
+.isomorphic-form label > span,
+.isomorphic-form .rizzui-phone-number > label {
+  @apply font-medium;
+}
+
+.isomorphic-form label > div {
+  @apply leading-none;
+}
+
+.isomorphic-form label > div,
+.isomorphic-form label input,
+.isomorphic-form label select {
+  @apply !text-sm;
+}
+
+/*
+* Draft Text Editor
+*/
+.text_editor .rdw-editor-wrapper .rdw-editor-toolbar {
+  @apply mb-0 rounded-none rounded-tl-md rounded-tr-md border-gray-300 px-1.5 py-2 text-sm;
+}
+
+.text_editor .rdw-editor-wrapper .rdw-editor-main {
+  @apply max-h-[180px] min-h-[120px] rounded-bl-md rounded-br-md border-b border-l border-r border-gray-300;
+}
+
+.text_editor .rdw-editor-wrapper .rdw-editor-main .public-DraftEditor-content {
+  @apply px-4 py-3 text-gray-700;
+}
+
+.text_editor .rdw-editor-wrapper .rdw-editor-toolbar > div {
+  @apply m-1.5 rounded border border-gray-100 @lg:m-1;
+}
+
+.text_editor
+  .rdw-editor-wrapper
+  .rdw-editor-toolbar
+  > div
+  > .rdw-option-wrapper {
+  @apply h-9 w-10 w-9 border-0 border-r border-gray-100 last:border-r-0 hover:bg-gray-50 hover:shadow-none @lg:m-0;
+}
+
+.text_editor
+  .rdw-editor-wrapper
+  .rdw-editor-toolbar
+  > div
+  > .rdw-option-wrapper.rdw-option-active {
+  @apply bg-gray-100 shadow-none;
+}
+
+.text_editor
+  .rdw-editor-wrapper
+  .rdw-editor-main
+  .public-DraftStyleDefault-block {
+  @apply m-0;
+}
+
+.radial-progress-bar {
+  background: radial-gradient(closest-side, #f1f1f1 85%, transparent 90% 100%),
+    conic-gradient(var(--progress-bg) var(--progress-value), #ddd 0);
+}
+
+/* React Quill */
+.react-quill .ql-toolbar.ql-snow {
+  @apply flex flex-wrap items-center gap-1.5 rounded-t-md border-gray-300;
+}
+
+.react-quill .ql-container {
+  @apply font-inter;
+}
+
+.react-quill .ql-container.ql-snow {
+  @apply rounded-b-md border-gray-300;
+}
+
+.react-quill .ql-editor {
+  @apply max-h-96 overflow-y-auto;
+}
+
+.react-quill .ql-toolbar.ql-snow .ql-formats {
+  @apply mr-0;
+}
+
+.react-quill-toolbar-bottom {
+  @apply pb-[41px];
+}
+
+.react-quill-toolbar-bottom .ql-toolbar.ql-snow {
+  @apply absolute bottom-0 left-0 right-0 rounded-b-md rounded-t-none;
+}
+
+.react-quill-toolbar-bottom .ql-container.ql-snow {
+  @apply rounded-b-none rounded-t-md;
+}
+
+.react-quill-toolbar-bottom .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border-top: 1px solid;
+  @apply border-t-gray-300;
+}
+
+/** All toolbar buttons are inside of .ql-formats */
+.ql-formats button,
+.ql-formats > span {
+  position: relative;
+  /** Set a tooltip with css pseudo-elements, when buttons are hover, active or focus */
+}
+
+.ql-formats button:hover::before,
+.ql-formats > span:hover::before {
+  content: '';
+  @apply absolute left-1/2 top-[-9px] z-10 -translate-x-1/2 transform border-x-[7px] border-y-[6px] border-solid border-transparent border-t-[#0d1e42];
+}
+
+.ql-formats button:hover::after,
+.ql-formats > span:hover::after {
+  @apply absolute left-1/2 top-[-41px] z-50 -translate-x-1/2 whitespace-nowrap rounded-md bg-[#0d1e42] px-2.5 py-2 text-xs text-white;
+}
+
+/** Set tooltip content for toolbar options **/
+.ql-bold:hover::after {
+  content: 'Bold';
+}
+
+.ql-italic:hover::after {
+  content: 'Italic';
+}
+
+.ql-underline:hover::after {
+  content: 'Underline';
+}
+
+.ql-strike:hover::after {
+  content: 'Strikeout';
+}
+
+.ql-link:hover::after {
+  content: 'Hyperlink';
+}
+
+.ql-blockquote:hover::after {
+  content: 'Quote';
+}
+
+.ql-code-block:hover::after {
+  content: 'Code Block';
+}
+
+.ql-list[value='bullet']:hover::after {
+  content: 'Bulleted List';
+}
+
+.ql-list[value='ordered']:hover::after {
+  content: 'Numbered List';
+}
+
+.ql-script[value='sub']:hover::after {
+  content: 'Sub Script';
+}
+
+.ql-script[value='super']:hover::after {
+  content: 'Super Script';
+}
+
+.ql-indent[value='-1']:hover::after {
+  content: 'Indent -1';
+}
+
+.ql-indent[value='+1']:hover::after {
+  content: 'Indent +1';
+}
+
+.ql-color:hover::after {
+  content: 'Text Color';
+}
+
+.ql-background:hover::after {
+  content: 'Background Color';
+}
+
+.ql-align:hover::after {
+  content: 'Text Align';
+}
+
+.ql-clean:hover::after {
+  content: 'Clear Formatting';
+}
+
+.ql-font:hover::after {
+  content: 'Font Family';
+}
+
+/* react-quill responsive styles */
+/* .react-quill .ql-toolbar {
+  @apply flex 3xl:block 3xl:max-w-none;
+}
+.react-quill .ql-snow .ql-formats {
+  @apply flex lg:inline-flex lg:items-center;
+} */
+
+/* social btn shadow  */
+.social-btn-shadow {
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1))
+    drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.1));
+}
+
+.social-btn-shadow:hover {
+  filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.05))
+    drop-shadow(0px 20px 25px rgba(0, 0, 0, 0.05));
+}
+
+/* profile card swiper pagination  */
+.profileModalCarousel .swiper-pagination .swiper-pagination-bullet,
+.profileCarousel .swiper-pagination .swiper-pagination-bullet {
+  @apply h-2 w-2 rounded-full bg-white opacity-60 transition-all;
+}
+
+.profileModalCarousel .swiper-pagination .swiper-pagination-bullet-active,
+.profileCarousel .swiper-pagination .swiper-pagination-bullet-active {
+  @apply w-4 rounded-xl bg-white opacity-100;
+}
+
+/* colors filter  */
+.colors-filter input[type='checkbox']:checked ~ svg {
+  @apply !hidden;
+}
+
+.rc-table-fixed-header thead th.rc-table-cell:nth-last-child(2) {
+  @apply rounded-ee-lg rounded-se-lg;
+}
+
+/* ................................................... */
+/* Recharts Base Styling */
+/* ................................................... */
+.recharts-wrapper .recharts-cartesian-axis-line {
+  @apply stroke-gray-200;
+}
+
+.recharts-wrapper .recharts-cartesian-axis-tick-value {
+  @apply fill-gray-400 text-xs;
+}
+
+.recharts-wrapper .recharts-cartesian-grid line {
+  @apply stroke-gray-300;
+}
+
+.recharts-wrapper .recharts-tooltip-cursor {
+  @apply opacity-20;
+}
+
+.recharts-wrapper .recharts-tooltip-cursor {
+  @apply dark:opacity-10;
+}
+
+.recharts-wrapper .recharts-brush rect:first-child {
+  @apply dark:fill-gray-400/50;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @apply dark:!text-gray-300;
+}
+
+/* ................................................... */
+/* Google Map Styles */
+/* ................................................... */
+
+/* .gmnoprint {
+  @apply hidden;
+} */
+div[style='z-index: 1000001;'],
+.gm-style-cc {
+  @apply hidden;
+}
+
+.pac-container {
+  @apply mt-4 rounded-lg border-t-0;
+}
+
+.pac-container:after {
+  content: none;
+}
+
+.pac-item {
+  @apply px-3 py-1.5 font-inter;
+}
+
+/* google location search auto complete  */
+/* .pac-container {
+  @apply w-full rounded-lg border border-gray-100 shadow after:hidden;
+}
+.pac-item {
+  @apply cursor-pointer py-3 pl-3 text-sm font-normal text-gray-300;
+}
+.pac-matched {
+  @apply text-sm text-gray-900;
+}
+.pac-icon {
+  @apply mt-0;
+} */
+
+/* checkout page payment card gradient  */
+.card-gradient {
+  background-image: linear-gradient(120deg, #fff 45%, #f5f5f5);
+}
+
+#nprogress .bar {
+  @apply !bg-primary;
+}
+
+/* ................................................... */
+/* React Big Calendar Styles */
+/* ................................................... */
+.rbc-month-view {
+  @apply border-gray-200;
+}
+
+.rbc-header {
+  @apply h-12 border-gray-200 py-3.5 text-[13px] font-semibold uppercase text-gray-400 lg:px-7;
+}
+
+:is(
+    .rbc-header + .rbc-header,
+    .rbc-day-bg + .rbc-day-bg,
+    .rbc-month-row + .rbc-month-row,
+    .rbc-timeslot-group
+  ) {
+  @apply border-gray-200;
+}
+
+.rbc-day-bg {
+  @apply sm:px-5;
+}
+
+.rbc-date-cell {
+  @apply p-2.5 text-left text-sm font-medium text-gray-700 md:p-5 md:text-lg;
+}
+
+.rbc-day-bg.rbc-off-range-bg {
+  @apply bg-gray-50;
+}
+
+.rbc-off-range {
+  @apply text-gray-400;
+}
+
+.rbc-time-header.rbc-overflowing,
+.rbc-time-view,
+.rbc-time-content,
+.rbc-time-header-content {
+  @apply border-t border-gray-200;
+}
+
+.rbc-today {
+  @apply bg-blue-lighter/10;
+}
+
+.rbc-day-slot .rbc-time-slot,
+.rbc-timeslot-group {
+  @apply border-gray-200 dark:!border-gray-400;
+}
+
+.rbc-day-slot .rbc-time-slot {
+  @apply border-t-0;
+}
+
+.rbc-day-slot .rbc-event {
+  @apply !h-auto border-0;
+}
+.rbc-event,
+.rbc-day-slot .rbc-background-event {
+  @apply rounded-md bg-primary px-2 py-1.5 text-sm font-medium;
+}
+
+.rbc-time-view .rbc-row {
+  @apply h-12;
+}
+
+.rbc-time-content > * + * > * {
+  @apply border-l border-gray-200;
+}
+.rbc-timeslot-group {
+  @apply border-b border-gray-200;
+}
+
+.rbc-time-header.rbc-overflowing {
+  @apply !mr-0 border-r border-transparent lg:mr-3.5;
+}
+
+.rbc-day-slot .rbc-event,
+.rbc-day-slot .rbc-background-event {
+  flex-flow: column;
+}
+
+.rbc-time-header-content .rbc-row-content {
+  @apply mt-5;
+}
+
+.rbc-time-header-gutter {
+  @apply !w-20 !max-w-full;
+}
+
+.rbc-time-gutter .rbc-timeslot-group {
+  @apply px-3.5 py-2 font-medium text-gray-900;
+}
+
+.rbc-timeslot-group {
+  @apply font-medium text-gray-900;
+}
+
+.rbc-label {
+  @apply px-2;
+}
+
+.rbc-day-slot .rbc-time-slot + .rbc-time-slot {
+  @apply border-t border-gray-200;
+}
+
+.rbc-timeslot-group {
+  @apply min-h-[80px] border-gray-200;
+}
+.rbc-toolbar {
+  @apply mb-0 rounded-t-md border border-b-0 border-gray-200 px-4 py-6;
+}
+
+.rbc-btn-group {
+  @apply rounded-md border border-gray-200;
+}
+
+.rbc-btn-group button {
+  @apply !m-0 !rounded-md border-0 text-sm font-medium text-gray-500 shadow-none hover:bg-white hover:text-gray-800 focus:bg-white active:bg-white active:shadow-none dark:hover:bg-gray-100 dark:focus:bg-gray-100 dark:focus:text-white dark:active:bg-gray-100 dark:active:text-white;
+}
+
+.rbc-toolbar button.rbc-active {
+  @apply border-gray-900 bg-gray-900 text-white shadow-none focus:border-gray-900 focus:bg-gray-900 focus:text-white dark:bg-gray-100;
+}
+
+.rbc-toolbar-label {
+  @apply font-lexend text-xl font-medium text-gray-900 dark:text-white;
+}
+
+.rbc-agenda-view {
+  @apply border;
+}
+
+.rbc-agenda-view,
+.rbc-agenda-view table.rbc-agenda-table,
+.rbc-agenda-view table.rbc-agenda-table thead > tr > th,
+.rbc-agenda-view table.rbc-agenda-table tbody > tr > td + td {
+  @apply border-gray-200;
+}
+
+.rbc-agenda-view table.rbc-agenda-table {
+  @apply border-0 border-b;
+}
+
+.rbc-agenda-empty {
+  @apply p-4 text-center;
+}
+
+/* react-colorful */
+.react-colorful {
+  @apply gap-3;
+}
+
+.react-colorful .react-colorful__pointer {
+  @apply h-4 w-4;
+}
+
+.react-colorful .react-colorful__saturation,
+.react-colorful .react-colorful__hue {
+  @apply rounded-md;
+}
+
+.react-colorful .react-colorful__alpha,
+.react-colorful .react-colorful__hue {
+  @apply h-3 rounded-md;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* pos top slider bullets style */
+
+.pos-all-items-top-slider .swiper-pagination {
+  @apply !-bottom-8;
+}
+
+.pos-all-items-top-slider .swiper-pagination span {
+  @apply !mx-[3px] !h-2 !w-2.5 !rounded-full !bg-gray-600 !duration-200;
+}
+.pos-all-items-top-slider
+  .swiper-pagination
+  span.swiper-pagination-bullet-active {
+  @apply !w-4 !bg-gray-400;
+}
