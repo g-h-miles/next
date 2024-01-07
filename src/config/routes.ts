@@ -93,6 +93,7 @@ export const routes = {
   accessDenied: '/access-denied',
   notFound: '/not-found',
   maintenance: '/maintenance',
+  privacy: '/privacy',
   blank: '/blank',
   auth: {
     signUp1: '/auth/sign-up-1',
