@@ -18,7 +18,7 @@ export default function SignIn() {
             Sign in to
             <UnderlineShape className="absolute -bottom-2 start-0 h-2.5 w-24 text-blue md:w-28 xl:-bottom-1.5 xl:w-36" />
           </span>{' '}
-          continue.
+          continue - Hi. Im New.
         </>
       }
       description="By signing up, you will gain access to exclusive content, special
